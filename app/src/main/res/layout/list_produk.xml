@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@android:color/white"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="6dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <!-- Gambar Produk -->
+        <ImageView
+            android:id="@+id/imgProduk"
+            android:layout_width="0dp"
+            android:layout_height="140dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+
+        <!-- Nama Produk -->
+        <TextView
+            android:id="@+id/tvNama"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Nama Produk"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@id/imgProduk"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Harga Produk -->
+        <TextView
+            android:id="@+id/tvHarga"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Rp. 0"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/purple_700"
+            app:layout_constraintTop_toBottomOf="@id/tvNama"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Stok dan Status Produk -->
+        <LinearLayout
+            android:id="@+id/layoutStokStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@id/tvHarga"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/tvStok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stok: 1"
+                android:textSize="13sp"
+                android:textColor="@color/green" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Tersedia"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="#4CAF50" />
+        </LinearLayout>
+
+        <!-- Tombol Order & Detail -->
+        <LinearLayout
+            android:id="@+id/layoutButtons"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="right"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/layoutStokStatus"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/btnOrder"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="16dp"
+                android:padding="4dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/keranjang"
+                android:contentDescription="Tambah ke keranjang" />
+
+            <ImageView
+                android:id="@+id/btnDetail"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:padding="4dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/detail"
+                android:contentDescription="Lihat detail produk" />
+        </LinearLayout>
+
+        <!-- TextView Jumlah Pengunjung -->
+        <TextView
+            android:id="@+id/tvJumlahPengunjung"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Jumlah Pengunjung: 0"
+            android:paddingTop="4dp"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/layoutButtons"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

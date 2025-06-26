@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_bottom_sheet"
+        android:padding="16dp">
+
+        <!-- Detail Produk -->
+        <ImageView
+            android:id="@+id/imgDetail"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/tvNamaDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nama Produk"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-medium"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvHargaDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Harga"
+            android:textSize="16sp"
+            android:textColor="@android:color/holo_green_dark"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvStokDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stok"
+            android:textSize="14sp"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvKategoriDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kategori"
+            android:textSize="14sp"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvDeskripsiDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Deskripsi"
+            android:textSize="14sp"
+            android:paddingBottom="16dp" />
+
+        <!-- Jumlah Pengunjung -->
+        <TextView
+            android:id="@+id/tvJumlahPengunjung"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jumlah Pengunjung: 0"
+            android:paddingTop="4dp"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp" />
+    </LinearLayout>
+</ScrollView>

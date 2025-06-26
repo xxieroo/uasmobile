@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    android:padding="16dp"
+    card_view:cardCornerRadius="16dp"
+    card_view:cardElevation="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:divider="?android:attr/dividerHorizontal"
+        android:showDividers="middle"
+        android:dividerPadding="8dp">
+
+        <!-- Order ID & Date -->
+        <TextView
+            android:id="@+id/tvNomorOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order #01 - 2024-06-17"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="#222222" />
+
+        <!-- Alamat -->
+        <TextView
+            android:id="@+id/tvAlamatOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alamat: Jl. Mawar No.10"
+            android:textSize="15sp"
+            android:textColor="#555555" />
+
+        <!-- Kota & Provinsi -->
+        <TextView
+            android:id="@+id/tvKotaProvinsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Semarang, Jawa Tengah"
+            android:textSize="15sp"
+            android:textColor="#555555" />
+
+        <!-- Subtotal & Ongkir -->
+        <TextView
+            android:id="@+id/tvSubtotalOngkir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Subtotal: Rp50.000 | Ongkir: Rp10.000"
+            android:textSize="15sp"
+            android:textColor="#555555" />
+
+        <!-- Total Bayar -->
+        <TextView
+            android:id="@+id/tvTotalBayar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Bayar: Rp60.000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000000" />
+
+        <!-- Metode & Estimasi -->
+        <TextView
+            android:id="@+id/tvMetodeEstimasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pembayaran: COD | Estimasi: 2-3 Hari"
+            android:textSize="15sp"
+            android:textColor="#555555" />
+
+        <!-- Status Badge -->
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sedang Diproses"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/status_background"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="start" />
+
+        <!-- Upload Button with Ripple -->
+        <Button
+            android:id="@+id/btnUploadBukti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upload Bukti"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/ripple_green"
+            android:layout_gravity="end"
+            android:layout_marginTop="12dp"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

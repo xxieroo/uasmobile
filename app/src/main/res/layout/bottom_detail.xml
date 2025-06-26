@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottom_detail_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/imgDetail"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tvNamaDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nama Produk"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingTop="8dp" />
+
+    <TextView
+        android:id="@+id/tvHargaDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Harga"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_red_dark"
+        android:paddingTop="4dp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tvStokDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Stok"
+        android:paddingTop="4dp" />
+
+    <TextView
+        android:id="@+id/tvKategoriDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kategori"
+        android:paddingTop="4dp" />
+
+    <TextView
+        android:id="@+id/tvDeskripsiDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Deskripsi"
+        android:paddingTop="4dp"
+        android:paddingBottom="12dp" />
+
+    <TextView
+        android:id="@+id/tvJumlahPengunjung"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Jumlah Pengunjung: 0"
+        android:paddingTop="4dp"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp" />
+
+</LinearLayout>

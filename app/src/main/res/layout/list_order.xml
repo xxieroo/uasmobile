@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@android:color/white"
+    card_view:cardCornerRadius="12dp"
+    card_view:cardElevation="6dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <!-- Gambar Produk -->
+        <ImageView
+            android:id="@+id/imgProduk"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="12dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <!-- Tombol Hapus -->
+        <ImageButton
+            android:id="@+id/btnHapus"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_delete"
+            android:contentDescription="Hapus" />
+
+        <!-- Kontainer Konten -->
+        <LinearLayout
+            android:id="@+id/layoutKonten"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/imgProduk"
+            android:layout_toStartOf="@id/btnHapus"
+            android:layout_alignTop="@id/imgProduk"
+            android:orientation="vertical"
+            android:paddingEnd="8dp">
+
+            <!-- Nama Produk -->
+            <TextView
+                android:id="@+id/tvNama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nama Produk"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+            <!-- Harga Produk -->
+            <TextView
+                android:id="@+id/tvHarga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Harga: Rp. 0"
+                android:textSize="14sp"
+                android:textColor="@android:color/darker_gray" />
+
+            <!-- Kontrol Jumlah -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageButton
+                    android:id="@+id/btnKurang"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@android:drawable/ic_media_previous"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Kurangi jumlah" />
+
+                <TextView
+                    android:id="@+id/tvJumlah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jumlah: 0"
+                    android:layout_marginHorizontal="8dp"
+                    android:textSize="14sp" />
+
+                <ImageButton
+                    android:id="@+id/btnTambah"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@android:drawable/ic_media_next"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Tambah jumlah" />
+            </LinearLayout>
+
+            <!-- Total -->
+            <TextView
+                android:id="@+id/tvTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total: Rp. 0"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginTop="6dp"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
