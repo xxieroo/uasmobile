@@ -179,7 +179,7 @@ public class ProductFragment extends Fragment {
 
                 boolean found = false;
                 for (Product p : orderList) {
-                    if (p.getNama().equals(product.getNama())) {
+                    if (p.getNama() != null && p.getNama().equals(product.getNama())) {
                         if (p.getQuantity() < p.getStok()) {
                             p.setQuantity(p.getQuantity() + 1);
                             Toast.makeText(context, "Ditambahkan ke checkout", Toast.LENGTH_SHORT).show();

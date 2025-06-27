@@ -87,6 +87,14 @@
             android:layout_marginTop="8dp"
             android:layout_gravity="start" />
 
+        <ImageButton
+            android:id="@+id/imgProof"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/default_selected_dot"
+            android:visibility="gone"/>
+
+
         <!-- Upload Button with Ripple -->
         <Button
             android:id="@+id/btnUploadBukti"
@@ -99,6 +107,7 @@
             android:layout_gravity="end"
             android:layout_marginTop="12dp"
             android:paddingLeft="24dp"
-            android:paddingRight="24dp" />
+            android:paddingRight="24dp"
+            android:visibility="gone"/>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

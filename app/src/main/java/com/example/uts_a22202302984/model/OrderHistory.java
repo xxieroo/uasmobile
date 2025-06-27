@@ -1,7 +1,7 @@
 package com.example.uts_a22202302984.model;
 
 public class OrderHistory {
-    private String order_id, tanggal, alamat, kota, provinsi, metode_pembayaran, estimasi, status;
+    private String order_id, tanggal, alamat, kota, provinsi, metode_pembayaran, estimasi, status, bukti_bayar;
     private int subtotal, ongkir, total;
 
     // Getter & Setter
@@ -13,6 +13,7 @@ public class OrderHistory {
     public String getMetode() { return metode_pembayaran; }
     public String getEstimasi() { return estimasi; }
     public String getStatus() { return status; }
+    public String getBukti_bayar() { return bukti_bayar; }
     public int getSubtotal() { return subtotal; }
     public int getOngkir() { return ongkir; }
     public int getTotal() { return total; }
@@ -25,6 +26,7 @@ public class OrderHistory {
     public void setMetode(String metode_pembayaran) { this.metode_pembayaran = metode_pembayaran; }
     public void setEstimasi(String estimasi) { this.estimasi = estimasi; }
     public void setStatus(String status) { this.status = status; }
+    public void setBukti_bayar(String bukti_bayar) { this.bukti_bayar = bukti_bayar; }
     public void setSubtotal(int subtotal) { this.subtotal = subtotal; }
     public void setOngkir(int ongkir) { this.ongkir = ongkir; }
     public void setTotal(int total) { this.total = total; }

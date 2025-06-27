@@ -1,11 +1,15 @@
 package com.example.uts_a22202302984.ui.home;
 
+import static android.content.Context.MODE_PRIVATE;
+
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -53,6 +57,21 @@ public class HomeFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
+
+        SharedPreferences sharedPreferences = requireContext().getSharedPreferences("user_session", MODE_PRIVATE);
+        boolean isGuest = sharedPreferences.getBoolean("is_guest", false);
+        String nama = sharedPreferences.getString("nama", null);
+
+        TextView tvProfil_Welcome = view.findViewById(R.id.tvProfil_Welcome);
+
+        if (isGuest) {
+            tvProfil_Welcome.setText("Selamat Datang Guest");
+        } else if (nama != null) {
+            tvProfil_Welcome.setText("Selamat Datang " + nama);
+        } else {
+            tvProfil_Welcome.setText("Selamat Datang");
+        }
+
         // Image Slider
         imageSlider = view.findViewById(R.id.imageSlider);
         ArrayList<SlideModel> slideModels = new ArrayList<>();
@@ -87,9 +106,7 @@ public class HomeFragment extends Fragment {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(ServerAPI.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
-
-
-                 .build();
+                .build();
 
         RegisterAPI api = retrofit.create(RegisterAPI.class);
         Call<List<Product>> call = api.getProducts();
