@@ -47,6 +47,13 @@ public interface RegisterAPI {
             @Part MultipartBody.Part foto
     );
 
+    @Multipart
+    @POST("upload_profile.php")
+    Call<ResponseBody> uploadFoto(
+            @Part("email") RequestBody email,
+            @Part MultipartBody.Part image
+    );
+
     @GET("get_produk.php")
     Call<List<Product>> getProducts();
 

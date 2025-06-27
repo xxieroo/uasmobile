@@ -37,7 +37,11 @@ public class MainActivity extends AppCompatActivity {
             if (isLoggedIn || isGuest) {
                 intent = new Intent(MainActivity.this, MainHome.class);
             } else {
-                intent = new Intent(MainActivity.this, MainLogin.class);
+                intent = new Intent(MainActivity.this, MainHome.class);
+                SharedPreferences isGuestSharedPreferences = getSharedPreferences("user_session", MODE_PRIVATE);
+                SharedPreferences.Editor editor = isGuestSharedPreferences.edit();
+                editor.putBoolean("is_guest", true);
+                editor.apply();
             }
             startActivity(intent);
             finish();
