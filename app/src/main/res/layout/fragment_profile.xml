@@ -56,6 +56,17 @@
             android:backgroundTint="#1976D2"
             android:layout_marginBottom="16dp" />
 
+        <!-- Tombol: Ganti Password -->
+        <Button
+            android:id="@+id/btnChangePassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CHANGE PASSWORD"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#1976D2"
+            android:layout_marginBottom="16dp" />
+
         <!-- Tombol: Kontak Kami -->
         <Button
             android:id="@+id/btnKontakKami"

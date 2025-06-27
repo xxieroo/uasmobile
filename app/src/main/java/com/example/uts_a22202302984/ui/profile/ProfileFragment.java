@@ -18,6 +18,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.bumptech.glide.Glide;
+import com.example.uts_a22202302984.ChangePassword;
 import com.example.uts_a22202302984.EditProfil;
 import com.example.uts_a22202302984.HistoryActivity;
 import com.example.uts_a22202302984.MainKontak;
@@ -42,7 +43,7 @@ public class ProfileFragment extends Fragment {
 
     private TextView tvNama, tvEmail;
     private ImageView ivAvatar;
-    private Button btnEditProfile, btnKontakKami, btnHistory, btnLogout;
+    private Button btnEditProfile, btnKontakKami, btnHistory, btnLogout, btnChangePassword;
     private String email;
     private SharedPreferences sharedPreferences;
 
@@ -74,6 +75,7 @@ public class ProfileFragment extends Fragment {
         tvNama = view.findViewById(R.id.tvNama);
         tvEmail = view.findViewById(R.id.tvEmail);
         btnEditProfile = view.findViewById(R.id.btnEditProfile);
+        btnChangePassword = view.findViewById(R.id.btnChangePassword);
         btnKontakKami = view.findViewById(R.id.btnKontakKami);
         btnHistory = view.findViewById(R.id.btnHistory);
         btnLogout = view.findViewById(R.id.btnLogout);
@@ -82,6 +84,11 @@ public class ProfileFragment extends Fragment {
 
         btnEditProfile.setOnClickListener(v -> {
             Intent intent = new Intent(getActivity(), EditProfil.class);
+            startActivity(intent);
+        });
+
+        btnChangePassword.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), ChangePassword.class);
             startActivity(intent);
         });
 

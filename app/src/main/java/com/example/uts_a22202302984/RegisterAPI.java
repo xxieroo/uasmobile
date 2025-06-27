@@ -94,6 +94,13 @@ public interface RegisterAPI {
     @POST("get_order_history.php")
     Call<List<OrderHistory>> getOrderHistory(@Field("email") String email);
 
+    @POST("post_change_password.php")
+    Call<ResponseBody> changePassword(
+            @Query("email") String email,
+            @Query("old_password") String oldPassword,
+            @Query("new_password") String newPassword
+    );
+
     @Multipart
     @POST("upload_bukti.php")
     Call<ResponseBody> uploadBuktiTransfer(
